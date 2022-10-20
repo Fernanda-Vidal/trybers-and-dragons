@@ -7,8 +7,10 @@ export default class PVP extends Battle {
   }
 
   fight(): number {
-    this.char1.attack(this.char2);
-    this.char2.attack(this.char1);
+    while (this.char1.lifePoints !== -1 && this.char2.lifePoints !== -1) {
+      this.char1.attack(this.char2);
+      this.char2.attack(this.char1);
+    }
     return super.fight();
   }
 }
