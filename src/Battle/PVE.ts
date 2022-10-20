@@ -6,20 +6,20 @@ export default class PVE extends Battle {
     super(fighter);
   }
 
-  // battleEnds(): boolean {
-  //   if (this.fighter.lifePoints !== -1
-  //     && this.environmental
-  //       .some((char) => char.lifePoints !== -1)) return false;
-  //   return true;
-  // }
+  //   battleEnds(): boolean {
+  //     if (this.fighter.lifePoints === -1
+  //       || this.environmental
+  //         .every((char) => char.lifePoints === -1)) return true;
+  //     return false;
+  //   }
 
   fight(): number {
-    // while (!this.battleEnds()) {
+    // const ends = this.battleEnds();
+    // while (!ends) {
     this.environmental.forEach((char) => {
       this.fighter.attack(char);
       char.attack(this.fighter);
     });
-    // }
     return super.fight();
   }
 }
