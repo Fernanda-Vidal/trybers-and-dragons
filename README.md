@@ -1,4 +1,4 @@
-## Trybers and Dragons
+# Trybers and Dragons
 
 Projeto desenvolvido no módulo de Back-end do curso de Desenvolvimento Web da [Trybe](https://www.betrybe.com/). 
 
